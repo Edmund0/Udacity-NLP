@@ -10,6 +10,7 @@
 
 # production (are these necessary)
 /build
+/dist
 
 # misc (are these necessary)
 .DS_Store
