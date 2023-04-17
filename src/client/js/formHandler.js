@@ -6,8 +6,8 @@ const postData = async ( url = ' ', data = {} ) => {
 
 	const response = await fetch (url, {
 
-		method: 'POST' , //GET, POST, PUT, DELETE, etc.
-		credentials: 'same-origin', //include, *same-origin, omit
+		method: 'POST' , 
+		credentials: 'same-origin', 
 		headers: {
 
 			'content-Type': 'application/json' ,
