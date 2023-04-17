@@ -28,7 +28,8 @@ module.exports = {
             filename: "./index.html",
         }),
         
-        new WorkboxPlugin.GenerateSW()
+        new WorkboxPlugin.GenerateSW(),
+        new MiniCssExtractPlugin()
     ],
     optimization: {
         minimizer: [
