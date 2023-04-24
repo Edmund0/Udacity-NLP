@@ -76,7 +76,11 @@ async function handleSubmit(event) {
     // })
 
 
-	if (formText.match(validator())) {
+	if (formText === "") {
+
+		alert("Please Enter URL");
+
+	} else if (formText.match(validator())) {
 		// let newData = await postData('http://localhost:8081/sendText', {formText: formText});
 		let newData = await postData('http://localhost:8081/sendURL', {formURL: formURL});
 		try {
