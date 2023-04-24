@@ -31,9 +31,13 @@ module.exports = {
         new WorkboxPlugin.GenerateSW(),
         new MiniCssExtractPlugin()
     ],
+    output:{
+        libraryTarget: 'var',
+        library: 'Client',
+    },
     optimization: {
         minimizer: [
           new CssMinimizerPlugin(),
         ],
-      },
+      }
 }
