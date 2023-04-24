@@ -46,12 +46,12 @@ const validator = () => {
 
 	const host 		= "(?:(?:[a-z\\u00a1-\\uffff0-9]-*)*[a-z\\u00a1-\\uffff0-9]+)";		// HOST NAME
 	const domain 	= "(?:\\.(?:[a-z\\u00a1-\\uffff0-9]-*)*[a-z\\u00a1-\\uffff0-9]+)*"; // DOMAIN NAME
-	const tld 		= "(?:\\.(?:[a-z\\u00a1-\\uffff]{2,}))\\.?";						// TOP-LEVEL-DOMAIN NAME (Optional) *********** [Why does it end in .?] *************
+	const tld 		= "(?:\\.(?:[a-z\\u00a1-\\uffff]{2,}))\\.?";						// TOP-LEVEL-DOMAIN NAME (Optional) 
 
 	const port 		= '(?::\\d{2,5})?';													// PORT NUMBER (Optional)
-	const path 		= '(?:[/?#][^\\s"]*)?';												// RESOURCE PATJ (Optional)
+	const path 		= '(?:[/?#][^\\s"]*)?';												// RESOURCE PATH (Optional)
 
-	const expression =  `(?:${protocol}|www\\.)${auth}(?:${ip}|${host}${domain}${tld})${port}${path}`;	// ********** www. may be unnecessary (confirm www\\.) **********
+	const expression =  `(?:${protocol}|www\\.)${auth}(?:${ip}|${host}${domain}${tld})${port}${path}`;	
 
 	const regex = new RegExp(`(?:^${expression}$)`, "ig"); 												// adds enclosing backslashes /.../
 	return regex;
