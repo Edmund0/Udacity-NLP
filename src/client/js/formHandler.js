@@ -82,6 +82,7 @@ async function handleSubmit(event) {
 
 	} else if (formText.match(validator())) {
 		// let newData = await postData('http://localhost:8081/sendText', {formText: formText});
+		console.log(document.URL);
 		let newData = await postData('http://localhost:8081/sendURL', {formURL: formURL});
 		try {
 			console.log(newData);
